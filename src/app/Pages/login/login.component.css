@@ -1,0 +1,124 @@
+.up-left , .down-right{
+  position: fixed;
+  overflow: hidden;
+}
+.up-left{
+  top: -40px;
+  left: -40px;
+}
+.down-right{
+  bottom: -40px;
+  right: -40px;
+  rotate: 180deg;
+}
+
+.login-card {
+  width: 400px;
+  padding: 20px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  background-color: inherit;
+  color: #062A32;
+
+}
+.titile{
+  text-align: center;
+  font-weight: 700;
+  font-size: 40px;
+}
+.button-wrapper, .card-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: inherit;
+  box-shadow: none;
+  border: none;
+}
+.card-cont{
+  margin-top: 10px;
+  height: 100%;
+}
+#buttonDiv {
+  width: 400px; 
+  margin: 0 auto;
+  background-color: inherit;
+  box-shadow: none;
+  border: none;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: right;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  max-width: 400px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 50px;
+  border: 1px solid #B9B9B6;
+  border-radius: 12px;
+  background-color: inherit;
+}
+
+.login-btn {
+  padding: 12px;
+  background-color: #2a7f6b;
+  color: #F7F7F2;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  max-width: 400px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 20px;
+  font-weight: bold;
+  font-family: 'Almarai', sans-serif;
+}
+
+.login-btn:hover {
+  background-color: #246c5d;
+}
+
+.signup-prompt {
+  margin-top: 20px;
+  text-align: center;
+  color: #565655;
+}
+
+.signup-link {
+  color: #062A32;
+  display: inline-block;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Almarai", sans-serif;
+  background-color: #f9f9f3;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+input::placeholder {
+  text-align: right;
+  direction: rtl;
+}

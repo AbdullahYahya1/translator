@@ -1,0 +1,40 @@
+<div class="translation-container">
+    <div class="translate-box">
+      <select
+        id="fromLanguage"
+        [(ngModel)]="fromLanguage"
+        (change)="translate()"
+      >
+        <option value="" disabled selected>اختيار اللغة</option>
+        <option *ngFor="let lang of languages" [value]="lang.code">
+          {{ lang.label }}
+        </option>
+      </select>
+      <textarea
+        placeholder="النص المترجم"
+        [(ngModel)]="translatedText"
+        readonly
+      ></textarea>
+    </div>
+    <div class="arrow-container">
+      <button (click)="swapLanguages()">&#8646;</button>
+    </div>
+    <div class="translate-box">
+      <select
+        id="toLanguage"
+        [(ngModel)]="toLanguage"
+        (change)="translate()"
+      >
+        <option value="" disabled selected>التعرف على اللغة</option>
+        <option *ngFor="let lang of languages" [value]="lang.code">
+          {{ lang.label }}
+        </option>
+      </select>
+      <textarea
+        placeholder="...اكتب النص هنا"
+        [(ngModel)]="sourceText"
+        (input)="onTextChange()"
+      ></textarea>
+    </div>
+  </div>
+  

@@ -1,0 +1,138 @@
+/* Decorative Elements */
+.decor-top-left, .decor-bottom-right {
+    position: fixed;
+    overflow: hidden;
+    z-index: -1;
+  }
+  .decor-top-left {
+    top: -40px;
+    left: -40px;
+  }
+  .decor-bottom-right {
+    bottom: -40px;
+    right: -40px;
+    transform: rotate(180deg);
+  }
+  
+  /* Auth Card Container */
+  .auth-card {
+    width: 400px;
+    padding: 2rem;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.5rem;
+    background-color: inherit;
+    color: #062A32;
+  }
+  
+  /* Typography */
+  .auth-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Form Elements */
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .auth-form label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-align: right;
+  }
+  
+  .auth-form input {
+    padding: 0.75rem;
+    border: 1px solid #B9B9B6;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+    width: 100%;
+    height: 3.125rem;
+    box-sizing: border-box;
+    background-color: inherit;
+  }
+  
+  /* Authentication Button */
+  .auth-btn {
+    padding: 0.75rem;
+    background-color: #2a7f6b;
+    color: #F7F7F2;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 1.25rem;
+    font-weight: 600;
+    font-family: 'Almarai', sans-serif;
+  }
+  
+  .auth-btn:hover {
+    background-color: #246c5d;
+  }
+  
+  /* Social Authentication */
+  .social-auth-container {
+    margin-top: 1rem;
+    background-color: inherit !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  
+   .card-cont {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: inherit;
+    box-shadow: none;
+    border: none;
+  }
+  .social-auth-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  #googleAuthButton {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* Auth Navigation Links */
+  .auth-navigation {
+    margin-top: 1.25rem;
+    text-align: center;
+    color: #565655;
+  }
+  
+  .auth-link {
+    color: #062A32;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 0.25rem;
+  }
+  input::placeholder {
+    text-align: right;
+    direction: rtl;
+  }
+  
+  
+  /* Base Styles */
+  body {
+    font-family: "Almarai", sans-serif;
+    background-color: #f9f9f3;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+  }

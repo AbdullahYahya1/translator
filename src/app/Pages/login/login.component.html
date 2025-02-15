@@ -1,0 +1,28 @@
+  <div class="login-card">
+    <h1 class="titile">! مرحبا بعودتك </h1>
+    <!-- Login Form -->
+    <form class="login-form">
+      <label for="email">* البريد الإلكتروني</label>
+      <input type="email" id="email" placeholder="Example@gmail.com" required>
+      
+      <label for="password">* كلمة المرور</label>
+      <input type="password" id="password" placeholder="ادخل كلمة مرور" required>
+      
+      <button type="submit" class="login-btn">تسجيل الدخول</button>
+    </form>
+
+    <!-- Google Sign-In Button -->
+    <mat-card class="card-cont">
+      <div class="button-wrapper">
+        <div id="buttonDiv"></div>
+      </div>
+    </mat-card>
+
+    <!-- Sign-Up Prompt -->
+    <div class="signup-prompt">
+      <span  class="signup-link" [routerLink]="'/register'">تسجيل صديق جديد</span>
+      انضم لعائلة لينقو الآن 
+    </div>
+  </div>
+  <img [src]="'zah.png'" class="up-left">
+  <img [src]="'zah.png'" class="down-right">

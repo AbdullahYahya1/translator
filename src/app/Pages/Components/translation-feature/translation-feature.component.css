@@ -1,0 +1,42 @@
+.translation-features-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    margin: 0 auto;
+}
+.title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 32px;
+    color: #292F38;
+    margin-bottom: 30px;
+    line-height: 60px;
+}
+.description{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: right;
+    color: #343C48;
+
+}
+.translation-features{
+    max-width: 50vw !important;
+}
+.translation-features-image{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.translation-features-image img{
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+}

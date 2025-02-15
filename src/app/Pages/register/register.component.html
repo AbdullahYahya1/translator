@@ -1,0 +1,35 @@
+<div class="auth-card">
+    <h1 class="auth-title"> مرحبا بك في لينقو </h1>
+    <!-- Registration Form -->
+    <form class="auth-form">
+      <label for="fullName">* الاسم</label>
+      <input type="text" id="fullName" placeholder="ادخل اسمك الكامل" required>
+      
+      <label for="regEmail">* البريد الإلكتروني</label>
+      <input type="email" id="regEmail" placeholder="Example@gmail.com" required>
+      
+      <label for="regPassword">* كلمة المرور</label>
+      <input type="password" id="regPassword" placeholder="ادخل كلمة مرور" required>
+
+      <label for="confirmPassword">* تأكيد كلمة المرور</label>
+      <input type="password" id="confirmPassword" placeholder="أعد إدخال كلمة المرور" required>
+      
+      <button type="submit" class="auth-btn">تسجيل الآن</button>
+    </form>
+
+    <!-- Google Auth Section -->
+    <mat-card class="card-cont">
+        <div class="button-wrapper">
+          <div id="buttonDiv"></div>
+        </div>
+      </mat-card>
+
+    <!-- Auth Navigation -->
+    <div class="auth-navigation">
+      هل لديك حساب؟ 
+      <span class="auth-link" [routerLink]="'/login'">سجل دخولك هنا</span>
+
+    </div>
+  </div>
+  <img [src]="'zah.png'" class="decor-top-left">
+  <img [src]="'zah.png'" class="decor-bottom-right">

@@ -1,0 +1,35 @@
+
+.login-button{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 12px;
+    gap: 10px;
+    position: relative;
+    width: 162px;
+    height: 50px;
+    background: #F1F3F5;
+    border: 1px solid #278B81;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: 80px;
+    background-color: #F7F7F2;
+}
+.header div , .header img{
+    margin-inline:50px ;
+}
