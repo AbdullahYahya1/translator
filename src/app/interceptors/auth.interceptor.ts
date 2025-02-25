@@ -61,7 +61,6 @@ export const authInterceptor: HttpInterceptorFn = (req: HttpRequest<unknown>, ne
 
       return authService.refreshToken(refreshToken).pipe(
         switchMap((response: any) => {
-          console.log(response)
           isRefreshing = false;
           localStorage.setItem('accessToken', response.result.accessToken);
           localStorage.setItem('refreshToken', response.result.refreshToken);

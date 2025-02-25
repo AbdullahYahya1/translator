@@ -119,7 +119,6 @@ export class TranlateWithVoiceComponent {
         next: (response) => {
           this.translating = false;
           this.translate = true;
-          console.log(response)
           const result = response.result;
           if (result) {
             this.transcribedText = result.transcribedText;

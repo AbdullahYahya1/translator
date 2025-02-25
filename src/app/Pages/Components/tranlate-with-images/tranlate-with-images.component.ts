@@ -110,7 +110,6 @@ export class TranlateWithImagesComponent {
           this.extractedText = response.result.translatedText || "Translation unavailable.";
         }
         
-        console.log('OCR + Translation Result:', this.extractedText);
       },
       error: (err) => {
         this.translating = false;

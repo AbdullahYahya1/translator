@@ -47,7 +47,6 @@ export class RegisterComponent implements AfterViewInit
 
   handleCredentialResponse(response: any): void
   {
-    console.log('✅ Google JWT Token:', response.credential);
     // Add registration logic here
   }
 
@@ -75,11 +74,11 @@ export class RegisterComponent implements AfterViewInit
         {
           next: (next) =>
           {
-            console.log(next)
+             (next)
             this.router.navigate(['/login']);
           },
           error:(err)=>{
-            console.log(err)
+             (err)
           }
         }
       )
