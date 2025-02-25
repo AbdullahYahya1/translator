@@ -4,6 +4,7 @@ import { inject } from '@angular/core';
 import { jwtDecode } from 'jwt-decode';
 import { BehaviorSubject, Observable, catchError, filter, switchMap, take, throwError } from 'rxjs';
 import { AuthService } from '../../services/auth.service';
+import { ToastrService } from 'ngx-toastr';
 
 interface JwtPayload {
   exp: number;
@@ -11,6 +12,8 @@ interface JwtPayload {
 
 export const authInterceptor: HttpInterceptorFn = (req: HttpRequest<unknown>, next: HttpHandlerFn): Observable<HttpEvent<unknown>> => {
   const authService = inject(AuthService);
+  const toastr= inject(ToastrService)
+
   let isRefreshing = false;
   const refreshTokenSubject = new BehaviorSubject<string | null>(null);
 
@@ -20,6 +23,16 @@ export const authInterceptor: HttpInterceptorFn = (req: HttpRequest<unknown>, ne
 
   const accessToken = localStorage.getItem('accessToken');
   const refreshToken = localStorage.getItem('refreshToken');
+  if (!accessToken) {
+    let anonReqCount = parseInt(localStorage.getItem('anonReqCount') || '0', 10);
+    anonReqCount++;
+    localStorage.setItem('anonReqCount', anonReqCount.toString());
+    if (anonReqCount >30) {
+      toastr.error("يحب عليك تسجيل الدخول للاستخدام")
+      authService.signOutExternal();
+      return throwError(() => new Error('Anonymous request limit reached. Please log in.'));
+    }
+  } 
 
   const addToken = (request: HttpRequest<unknown>, token: string | null) => {
     return token 

@@ -2,7 +2,7 @@
 .decor-top-left, .decor-bottom-right {
     position: fixed;
     overflow: hidden;
-    z-index: -1;
+    z-index: -10;
   }
   .decor-top-left {
     top: -40px;
@@ -135,4 +135,18 @@
     height: 100vh;
     margin: 0;
     overflow: hidden;
+  }
+
+  @media (max-width:600px) {
+
+    .decor-top-left {
+      top: -90px;
+      left: -40px;
+    }
+    .decor-bottom-right {
+      bottom: -90px;
+      right: -40px;
+      transform: rotate(180deg);
+    }
+    
   }

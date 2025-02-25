@@ -14,8 +14,9 @@ export class AuthService
   constructor(private router: Router) { }
   public signOutExternal = () =>
   {
+    let anonReqCount = localStorage.getItem('anonReqCount') || '0';
     localStorage.clear();
-    console.log("token deleted");
+    localStorage.setItem("anonReqCount",anonReqCount)
     this.router.navigate(['/login']);
   }
   LoginWithGoogle(credentials: string): Observable<any>

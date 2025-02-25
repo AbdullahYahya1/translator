@@ -1,6 +1,7 @@
 .up-left , .down-right{
   position: fixed;
   overflow: hidden;
+  z-index: -10;
 }
 .up-left{
   top: -40px;
@@ -122,4 +123,17 @@ body {
 input::placeholder {
   text-align: right;
   direction: rtl;
+}
+
+@media (max-width:600px) {
+
+  .decor-top-left {
+    top: -90px;
+    left: -40px;
+  }
+  .decor-bottom-right {
+    bottom: -90px;
+    right: -40px;
+    transform: rotate(180deg);
+  }
 }

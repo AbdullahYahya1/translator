@@ -95,20 +95,29 @@ export class TranlateWithImagesComponent {
     this.translating = true;
   
     this.masterService.extractTextImage(this.selectedFile, sourceLangValue, targetLangName)
-      .subscribe({
-        next: (response) => {
+    .subscribe({
+      next: (response) => {
+        this.translating = false;
+        this.translate = true;
+        
+        if (response.result.extractedText === "No text extracted or invalid response.") {
+          this.toastr.error('لم نستطع معلاجة الصوره هذه');
           this.translating = false;
-          this.translate = true;
-          console.log(response.result);
-          this.extractedText = response.result.translatedText || "Translation failed.";
-          console.log('OCR + Translation Result:', this.extractedText);
-        },
-        error: (err) => {
-          this.translating = false;
-          console.error('Failed to extract/translate image:', err);
-          this.toastr.error('فشل في استخراج أو ترجمة النص من الصورة');
+          this.translate = false;
+          this.extractedText = '';
+          return        
+        } else {
+          this.extractedText = response.result.translatedText || "Translation unavailable.";
         }
-      });
+        
+        console.log('OCR + Translation Result:', this.extractedText);
+      },
+      error: (err) => {
+        this.translating = false;
+        console.error('Failed to process image:', err);
+        this.toastr.error('لم نستطع معلاجة الصوره هذه');
+      }
+    });
   }
   
 
