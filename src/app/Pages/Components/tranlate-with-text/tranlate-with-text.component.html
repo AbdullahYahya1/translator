@@ -1,39 +1,55 @@
 <div class="translation-container">
     <div class="translate-box">
       <select
-        id="fromLanguage"
-        [(ngModel)]="fromLanguage"
+        id="toLanguage"
+        [(ngModel)]="toLanguage"
         (change)="translate()"
+        (paste)="translate()"
       >
         <option value="" disabled selected>اختيار اللغة</option>
         <option *ngFor="let lang of languages" [value]="lang.code">
-          {{ lang.label }}
+          {{ lang.labelAr }}
         </option>
       </select>
-      <textarea
+      @if(this.translating){
+        <textarea
+        placeholder="جاري الترجمه"
+        [(ngModel)]="translatedText"
+        readonly
+      ></textarea>
+      }@else{
+        <textarea
         placeholder="النص المترجم"
         [(ngModel)]="translatedText"
         readonly
       ></textarea>
+      }
+
     </div>
     <div class="arrow-container">
       <button (click)="swapLanguages()">&#8646;</button>
     </div>
     <div class="translate-box">
       <select
-        id="toLanguage"
-        [(ngModel)]="toLanguage"
-        (change)="translate()"
-      >
-        <option value="" disabled selected>التعرف على اللغة</option>
-        <option *ngFor="let lang of languages" [value]="lang.code">
-          {{ lang.label }}
-        </option>
-      </select>
+      id="fromLanguage"
+      [(ngModel)]="fromLanguage"
+      (change)="translate()"
+    >
+    @if (this.fromLanguage ==""){  
+    <option value="" disabled *ngIf="!fromLanguage">التعرف على اللغة</option>
+  }@else{
+    <option [value]="fromLanguage" selected>
+       {{ this.fromLanguage }}
+    </option>
+  }
+      
+    </select>
+
       <textarea
         placeholder="...اكتب النص هنا"
         [(ngModel)]="sourceText"
         (input)="onTextChange()"
+
       ></textarea>
     </div>
   </div>

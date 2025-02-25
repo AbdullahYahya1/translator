@@ -1,3 +1,3 @@
 export const enviroment= {
-    apiUrl: "https://localhost:7253"
+    apiUrl: "https://translateapp.somee.com"
 }

@@ -1,5 +1,5 @@
 
-.login-button{
+.login-button , .logout-button{
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -31,5 +31,11 @@
     background-color: #F7F7F2;
 }
 .header div , .header img{
-    margin-inline:50px ;
+    margin-inline:10px ;
+}
+.header-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }

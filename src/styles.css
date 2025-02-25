@@ -2,5 +2,12 @@ body{
     background-color: #F7F7F2;
     font-family: 'Almarai', sans-serif;
     margin: 0; 
+    padding: 20px;
+    max-width: 1277px;
+    margin-inline: auto; 
+
 }
 html, body { height: 100%; }
+*{
+    font-family: 'Almarai', sans-serif;
+}

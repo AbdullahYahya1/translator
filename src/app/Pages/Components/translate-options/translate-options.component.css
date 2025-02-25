@@ -1,29 +1,45 @@
-.translate-options-container{
-display: flex;
-flex-direction: row;
-justify-content: flex-end;
-align-items: center;
-gap: 32px;
-height: 56px;
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-}
-
-.translate-options-container div{
-box-sizing: border-box;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 14px 22px;
-gap: 10px;
-background: #F1F3F5;
-border: 1px solid #278B81;
-border-radius: 12px;
-flex: none;
-order: 1;
-flex-grow: 0;
-cursor: pointer;
-}
+.translate-options-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 32px;
+    height: 56px;
+    margin: 30px 0px;
+  }
+  
+  .translate-options-container div {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 22px;
+    gap: 10px;
+    background: #F1F3F5;
+    border: 1px solid #278B81;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 600px) {
+    .translate-options-container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      gap: 16px; 
+      height: auto; 
+      width: 90%;
+      margin-inline:auto;
+    }
+  
+    .translate-options-container div {
+      padding: 10px 16px; 
+      gap: 8px; 
+    }
+  }
+  .translate-options-container div.active {
+    background: #278B81;
+    color: white;
+  }
+  

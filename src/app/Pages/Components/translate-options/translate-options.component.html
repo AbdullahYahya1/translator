@@ -1,12 +1,21 @@
 <div class="translate-options-container">
-    <div [routerLink]="['/home', 'Voice']">
-        صوتيات
+    <div
+      [routerLink]="['/home', 'Voice']"
+      [ngClass]="{ active: isActive('Voice') }"
+    >
+      صوتيات
     </div>
-    <div [routerLink]="['/home', 'Images']">
-        صور
+    <div
+      [routerLink]="['/home', 'Images']"
+      [ngClass]="{ active: isActive('Images') }"
+    >
+      صور
     </div>
-
-    <div [routerLink]="['/home', 'Text']">
-        ترجمة نصوص
+    <div
+      [routerLink]="['/home', 'Text']"
+      [ngClass]="{ active: isActive('Text') }"
+    >
+      ترجمة نصوص
     </div>
-</div>
+  </div>
+  

@@ -1,9 +1,10 @@
 .translation-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
     gap: 1rem;
     margin-top: 25px;
+    
   }
   
   .translate-box {
@@ -64,4 +65,74 @@
     cursor: pointer;
     background-color: inherit;
     font-size: 37px;
+  }
+
+
+  @media (max-width: 768px) {
+    .translation-container {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 0 15px;
+    }
+  
+    .translate-box {
+      width: 100%;
+    }
+  
+    .translate-box select {
+      font-size: 18px;
+      height: 48px;
+      background-size: 20px 20px;
+      padding: 8px 16px 8px 40px;
+      background-position: left 8px center;
+    }
+  
+    textarea {
+      height: 200px;
+      font-size: 16px;
+      width: 100% !important;
+
+    }
+  
+    .arrow-container button {
+      margin: 20px 0;
+      transform: rotate(90deg);
+      font-size: 32px;
+    }
+  
+    /* Optional: Adjust font sizes for better mobile experience */
+    .translate-box select,
+    .translate-box textarea {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .translation-container {
+      margin-top: 15px;
+    }
+  
+    .translate-box select {
+      height: 44px;
+      font-size: 16px;
+    }
+  
+    textarea {
+      height: 150px;
+      padding: 10px;
+      width: 100% !important;
+
+    }
+  
+    .arrow-container button {
+      margin: 15px 0;
+      font-size: 28px;
+    }
+  }
+
+    
+  @media (max-width: 1271px) {
+    textarea {
+      width: 40vw;
+    }
   }

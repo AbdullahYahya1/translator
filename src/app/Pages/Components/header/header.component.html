@@ -1,4 +1,13 @@
 <div class="header">
-    <div class="login-button" [routerLink]="'/login'">تسجيل الدخول</div>
+    @if (!loggedIn) {
+        <div class="login-button" [routerLink]="'/login'">تسجيل الدخول</div>
+    }@else{
+        <div class="header-items">
+            <div class="logout-button" (click)="logout()">تسجيل الخروج</div>
+            <div>
+                {{this.username}}
+            </div>
+        </div>
+    }
     <img [src]="'assets/logo.png'">
 </div>

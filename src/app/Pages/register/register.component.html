@@ -1,30 +1,27 @@
 <div class="auth-card">
     <h1 class="auth-title"> مرحبا بك في لينقو </h1>
-    <!-- Registration Form -->
-    <form class="auth-form">
+    <form class="auth-form" (ngSubmit)="register()">
       <label for="fullName">* الاسم</label>
-      <input type="text" id="fullName" placeholder="ادخل اسمك الكامل" required>
+      <input type="text" id="fullName" placeholder="ادخل اسمك الكامل" required  [(ngModel)]="fullName" name="fullName">
       
       <label for="regEmail">* البريد الإلكتروني</label>
-      <input type="email" id="regEmail" placeholder="Example@gmail.com" required>
+      <input type="email" id="regEmail" placeholder="Example@gmail.com" required [(ngModel)]="email"name="regEmail">
       
       <label for="regPassword">* كلمة المرور</label>
-      <input type="password" id="regPassword" placeholder="ادخل كلمة مرور" required>
+      <input type="password" id="regPassword" placeholder="ادخل كلمة مرور" required [(ngModel)]="password"name="regPassword">
 
       <label for="confirmPassword">* تأكيد كلمة المرور</label>
-      <input type="password" id="confirmPassword" placeholder="أعد إدخال كلمة المرور" required>
+      <input type="password" id="confirmPassword" placeholder="أعد إدخال كلمة المرور" required [(ngModel)]="password2"name="confirmPassword">
       
       <button type="submit" class="auth-btn">تسجيل الآن</button>
     </form>
 
-    <!-- Google Auth Section -->
     <mat-card class="card-cont">
         <div class="button-wrapper">
           <div id="buttonDiv"></div>
         </div>
       </mat-card>
 
-    <!-- Auth Navigation -->
     <div class="auth-navigation">
       هل لديك حساب؟ 
       <span class="auth-link" [routerLink]="'/login'">سجل دخولك هنا</span>
